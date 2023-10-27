@@ -18,7 +18,7 @@ def main():
     st.title("Customer Personality Analysis")
 
     # Add a file uploader
-    file = st.file_uploader("Upload a CSV file", type="csv")
+    file =("new_v2df.csv")
 
     if file is not None:
         # Read the uploaded file into a DataFrame

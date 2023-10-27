@@ -1,4 +1,3 @@
-import plotly 
 import sklearn 
 from sklearn import preprocessing 
 import streamlit as st

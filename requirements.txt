@@ -1,3 +1,6 @@
 scikit-learn
 streamlit
 plotly
+matplotlib
+pickle
+

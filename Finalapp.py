@@ -13,6 +13,9 @@ import pandas as pd
 
 st.set_page_config(layout="wide",page_title="Customer segmentation Dashboard")
 st.title("Customer Personality Analysis")
+filename = 'Dec_treev1.sav'
+loaded_model = pickle.load(open(filename, 'rb'))
+
 ###############################
 # Add a File Uploader widget
 filess = st.file_uploader("Upload a CSV file")
@@ -36,17 +39,15 @@ try:
 except Exception as e:
     st.write(f"Failed to fetch data from GitHub: {e}")
 
-###############################3
-filename = 'Dec_treev1.sav'
-loaded_model = pickle.load(open(filename, 'rb'))
+###############################
 
 def main():    
     # Add a file uploader
     #file = st.file_uploader("Upload a CSV file", type="csv")
 
-    if file is not None:
+   
         # Read the uploaded file into a DataFrame
-        #df = pd.read_csv(file)
+        #df= pd.read_csv(file)
 
         # Display the DataFrame
         #st.write("Uploaded DataFrame:")
@@ -95,6 +96,3 @@ def main():
         # Display the label counts as a table
         st.write("Total Predictions per Label:")
         st.write(label_counts)
-
-        
-        
